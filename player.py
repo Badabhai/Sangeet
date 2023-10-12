@@ -1,9 +1,9 @@
-from pygame import mixer
+import pygame as pg
 import os
 import random
 
-mixer.init()
-mixer.music.set_volume(0.5)
+pg.mixer.init()
+pg.mixer.music.set_volume(0.5)
 
 s=0
 start = 0
@@ -22,7 +22,7 @@ def get_songs():
 def queueSong(i):
     n=i+1
     while(n<len(new_list)):
-        mixer.music.queue(f"./songs/{new_list[n]}")
+        pg.mixer.music.queue(f"./songs/{new_list[n]}")
         n=n+1
 
 def loadSong(i):
@@ -30,19 +30,19 @@ def loadSong(i):
         i=0
     global s
     s = i
-    mixer.music.load(f"./songs/{new_list[i]}")
+    pg.mixer.music.load(f"./songs/{new_list[i]}")
     global start
     start=1
     queueSong(i)
 
 def playSong():
-    mixer.music.play()
+    pg.mixer.music.play()
 
 def pauseSong():
-    mixer.music.pause()
+    pg.mixer.music.pause()
 
 def resume():
-    mixer.music.unpause()
+    pg.mixer.music.unpause()
 
 def previousSong():
     global s
@@ -63,16 +63,16 @@ def nextSong():
 
 
 def getVolume():
-    return mixer.music.get_volume()
+    return pg.mixer.music.get_volume()
 
 def setVolume(volume):
-    mixer.music.set_volume(volume)
+    pg.mixer.music.set_volume(volume)
 
 def getPos():
-    return mixer.music.get_pos()
+    return pg.mixer.music.get_pos()
 
 def getState():
-    return mixer.music.get_busy()
+    return pg.mixer.music.get_busy()
 
 def Started():
     if start == 0:

@@ -10,14 +10,6 @@ with Home:
     for i in range(len(songs)):
         if st.button(songs[i])==True:
             p.Play(i)
-    # if st.button(songs[1])==True:
-    #     p.Play(1)
-    # if st.button(songs[2])==True:
-    #     p.Play(2)
-    # if st.button(songs[3])==True:
-    #     p.Play(3)
-    # if st.button(songs[4])==True:
-    #     p.Play(4)
     
 
 with Player:
