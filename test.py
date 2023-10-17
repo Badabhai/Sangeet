@@ -30,6 +30,7 @@ with Player:
                 p.resume()
             if(state == False) and (start == False):
                 p.Play(0)
+        pass
 
     with Next:
         if st.button("Next"):
@@ -38,8 +39,8 @@ with Player:
 
     # pos = st.slider(five[i],0,value =p.getPos())
 
-    volume = st.slider("Volume",0.0,1.0,value=p.getVolume())
-    p.setVolume(volume)
+    # volume = st.slider("Volume",0.0,1.0,value=p.getVolume())
+    # p.setVolume(volume)
     
 
 with Settings:
